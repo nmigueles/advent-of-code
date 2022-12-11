@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "command",
+            "name": "2022",
+            "program": "npm run 2022",
+        },
+        
+    ]
+}
