@@ -1,20 +1,39 @@
 {
-  "name": "advent-of-code",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nmigueles/advent-of-code.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nmigueles/advent-of-code/issues"
-  },
-  "homepage": "https://github.com/nmigueles/advent-of-code#readme"
+    "name": "advent-of-code",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "dev": "nodemon",
+        "build": "rm -rf dist && tsc",
+        "test": "jest",
+        "start": "node dist/index.js",
+        "init-day": "ts-node src/scripts/initNewDay/initNewDay.ts",
+        "lint": "eslint src",
+        "lint:fix": "eslint --fix src"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nmigueles/advent-of-code.git"
+    },
+    "author": "Nicolás Migueles",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/nmigueles/advent-of-code/issues"
+    },
+    "homepage": "https://github.com/nmigueles/advent-of-code#readme",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/jest": "^27.0.3",
+        "@typescript-eslint/eslint-plugin": "^5.5.0",
+        "@typescript-eslint/parser": "^5.5.0",
+        "eslint": "^8.3.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-jest": "^25.3.0",
+        "jest": "^27.4.2",
+        "nodemon": "^2.0.15",
+        "prettier": "^2.5.0",
+        "ts-jest": "^27.0.7",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.2"
+    }
 }
