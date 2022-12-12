@@ -8,10 +8,14 @@ describe('AoC test runner', () => {
     .map((dirent) => dirent.name);
 
   for (const day of dirs) {
-    it(`Tests day ${day}`, async () => {
+    it(`Tests day ${day} - Part 1`, async () => {
       const puzzle: PuzzleInterface = await PuzzleFactory.getPuzzle(day);
-      expect(puzzle.solveFirst()).toEqual(puzzle.getFirstExpectedResult());
-      expect(puzzle.solveSecond()).toEqual(puzzle.getSecondExpectedResult());
+      expect(puzzle.solvePartOne()).toEqual(puzzle.getPartOneExpectedResult());
+    });
+    
+    it(`Tests day ${day} - Part 2`, async () => {
+      const puzzle: PuzzleInterface = await PuzzleFactory.getPuzzle(day);
+      expect(puzzle.solvePartTwo()).toEqual(puzzle.getPartTwoExpectedResult());
     });
   }
 });

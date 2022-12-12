@@ -2,11 +2,11 @@ import Puzzle from '../../types/AbstractPuzzle';
 
 export default class Day1 extends Puzzle {
     private convertToInventories(): number[] {
-        const lines = this.input.trim().split("\n")
+        const lines = this.input.trim().split('\n');
         const inventories: number[] = [];
         let sum = 0;
         for (const line of lines) {
-            if (line === "") {
+            if (line === '') {
                 inventories.push(sum);
                 sum = 0;
                 continue;
@@ -17,23 +17,23 @@ export default class Day1 extends Puzzle {
         return inventories;
     }
 
-    public solveFirst(): string {
+    public solvePartOne(): string {
         return Math.max(...this.convertToInventories()).toString();
     }
 
-    public solveSecond(): string {
-        const ordered = this.convertToInventories().sort((a,b) => a - b).reverse();
+    public solvePartTwo(): string {
+        const ordered = this.convertToInventories().sort((a, b) => a - b).reverse();
         console.log(ordered);
         return ordered.slice(0, 3).reduce((total, a) => {
-            total += a; return total
+            total += a; return total;
         }, 0).toString();
     }
 
-    public getFirstExpectedResult(): string {
+    public getPartOneExpectedResult(): string {
         return '72478';
     }
 
-    public getSecondExpectedResult(): string {
+    public getPartTwoExpectedResult(): string {
         return '210367';
     }
 }

@@ -10,8 +10,8 @@ if (!dayToSolve) {
 console.log(`Solving Day #${args[0]}`);
 (async () => {
   const puzzle = await PuzzleFactory.getPuzzle(args[0]);
-  console.log("Part 1");
-  console.log(puzzle.solveFirst());
-  console.log("Part 2");
-  console.log(puzzle.solveSecond());
+  console.log('Part 1');
+  console.log(puzzle.solvePartOne());
+  console.log('Part 2');
+  console.log(puzzle.solvePartTwo());
 })();
